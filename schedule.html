@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swachh Explorer | Solid Waste Management India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="styles.css" />   
+</head>
+<body>
+   
+	<header>
+	        <div class="container">
+	            <div class="nav-bar">
+	                <a href="index.html" class="logo">Swachh<span>Explorer</span></a>
+	                <ul class="tabs">
+	                    <li><a href="index.html" class="tab-button">Home</a></li>
+	                    <li><a href="about.html" class="tab-button">About</a></li>
+	                    <li><a href="schedule.html" class="tab-button">Schedule</a></li>
+	                    <li><a href="visualize.html" class="tab-button">Visualize</a></li>
+	                    <li><a href="grievances.html" class="tab-button">Grievances</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </header>
+
+    <main>
+        
+        <!-- MAP TABS -->
+       
+            <h2 class="section-title" style="padding: 20px 20px 10px; text-align:center;">Map 1: Local waste collection schedule</h2>
+			<div class="container">
+				<div class="about-text">
+					<p><strong>Important Data Disclaimer</strong></p>
+					<p>All data shown on this GIS map is simulated (mock/fictional) for demonstration purposes only.</p>
+					<p>Once we receive official approval and access to authentic solid waste management datasets from the concerned authority, the platform will be updated with real, accurate, and live data. Until then, all information you see are entirely simulated to showcase the intended functionality and user experience.</p>
+			 	</div>
+		 	</div>
+		 	<div class="map-container">
+                <iframe src="https://abc.maps.arcgis.com/apps/instant/sidebar/index.html?appid=1e5fde017dab45fe8815f7da4094e153" allowfullscreen></iframe>
+            </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <h2 class="dustbin-title">Types of Colour-Coded Dustbins and Their Usage</h2>
+            <div class="dustbins-grid">
+                <div class="dustbin-card dustbin-green"><h3>GREEN</h3><p>Biodegradable & organic</p></div>
+                <div class="dustbin-card dustbin-blue"><h3>BLUE</h3><p>Dry & recyclable</p></div>
+                <div class="dustbin-card dustbin-red"><h3>RED</h3><p>Hazardous / biomedical</p></div>
+                <div class="dustbin-card dustbin-yellow"><h3>YELLOW</h3><p>Sanitary & medical</p></div>
+                <div class="dustbin-card dustbin-black"><h3>BLACK/GREY</h3><p>General waste</p></div>
+            </div>
+            <p class="copyright">© 2026 Swachh Explorer</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+
+
+</body>
+</html>

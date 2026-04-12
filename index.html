@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swachh Explorer | Solid Waste Management India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+	        <div class="container">
+	            <div class="nav-bar">
+	                <a href="index.html" class="logo">Swachh<span>Explorer</span></a>
+	                <ul class="tabs">
+	                    <li><a href="index.html" class="tab-button active">Home</a></li>
+	                    <li><a href="about.html" class="tab-button">About</a></li>
+	                    <li><a href="schedule.html" class="tab-button">Schedule</a></li>
+	                    <li><a href="visualize.html" class="tab-button">Visualize</a></li>
+	                    <li><a href="grievances.html" class="tab-button">Grievances</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </header>
+
+    <main>
+        <div id="home" class="tab-content active"> 
+            <div class="hero">
+                <div class="container">
+                    <h1>Welcome to <span class="highlight">Swachh Explorer</span></h1>
+                    <p>GIS for India's Urban Seniors: Advancing Solid Waste Management and Independent Living</p>
+                    <!-- <a href="#" onclick="switchTab('map1'); return false;" class="btn">Start Exploring →</a> -->
+					<a href="schedule.html" class="btn">Start Exploring →</a> 
+                </div>
+            </div>
+            
+            <!-- EXPLORE MAPS SECTION – original compact emoji icons -->
+            <div class="explore-section">
+                <div class="container">
+                    <h2 class="section-title" style="text-align: center;">Explore Our Interactive Maps</h2>
+                    <div class="cards-grid">
+                        <div class="map-card">
+                            <div class="card-icon">
+							<img src="images/GarbageCollectionIcon.png" alt="Map 1">
+							</div>
+                              <!--<h3>Local waste collection schedule</h3> -->
+                            <!-- <p>Local waste collection schedule</p> -->
+                           <!-- <a href="#" onclick="switchTab('map1'); return false;" class="btn">Local waste collection schedule</a> -->
+							<a href="schedule.html" class="btn">Local waste collection schedule</a>
+                        </div>
+                        <div class="map-card">
+                            <div class="card-icon">
+							<img src="images/SWMVisualization.png" alt="Map 1">
+							</div>
+                            <!-- <h3>Urban waste management visualization</h3> -->
+                            <!-- <p>Urban waste management visualization</p> -->
+                            <!-- <a href="#" onclick="switchTab('map2'); return false;" class="btn">Urban waste management visualization</a> -->
+                       		<a href="visualize.html" class="btn">Urban waste management visualization</a>
+						</div>
+                        <div class="map-card">
+                            <div class="card-icon">
+							<img src="images/SWMGrievances.png" alt="Map 1">
+							</div>
+                            <!-- <h3>SWM Grievances over years</h3> -->
+                            <!-- <p>SWM Grievances over years</p> -->
+                            <!-- <a href="#" onclick="switchTab('map3'); return false;" class="btn">SWM Grievances over years</a> -->
+							<a href="grievances.html" class="btn">SWM Grievances over years</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GET IN TOUCH SECTION – tight layout matching your screenshot -->
+            <div class="cta-section">
+                <div class="container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="cards-grid">
+
+                        <a href="https://arcg.is/zrOfW2" target="_blank" class="map-card" style="text-decoration:none;">
+                            <div class="card-icon">⚠️</div>
+                            <h3>Report Issues</h3>
+                            <p><strong>Swachh Explorer – By the Community, For the Community</strong><br>
+                               Help us improve Swachh Explorer. Your feedback and issue reports make this platform stronger for everyone.</p>
+                            <span class="btn">Submit Your Report Now →</span>
+                        </a>
+
+                        <div class="map-card" onclick="window.location.href='mailto:contact@swacchexplorer.in'">
+                            <div class="card-icon">🤝</div>
+                            <h3>Contact Us</h3>
+                            <p><strong>Collaborations &amp; Partnerships Welcome</strong><br>
+                               NGOs, community groups, and SWM organizations – partner with us to help maintain the platform, extend solid waste management features across India, and explore new ways to strengthen community impact.</p>
+                            
+                            <div class="email-section">
+                                <div class="email-display">
+                                    <a href="mailto:contact@swacchexplorer.in" onclick="event.stopImmediatePropagation();">contact@swacchexplorer.in</a>
+                                </div>
+                                <button onclick="copyEmail(event)" class="btn">Copy Email</button>
+                            </div>
+                        </div>
+
+                        <a href="https://apps.bbmpgov.in/SWM/Home/Forms/Home.aspx" target="_blank" class="map-card" style="text-decoration:none;">
+                            <div class="card-icon">🏛️</div>
+                            <h3>Municipal Site</h3>
+                            <p><strong>Official Solid Waste Management website.</strong><br>
+                               Provides vendor details, ward information, official documents &amp; circulars, and complaint registration.</p>
+                            <span class="btn">Visit Official Site →</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <h2 class="dustbin-title">Types of Colour-Coded Dustbins and Their Usage</h2>
+            <div class="dustbins-grid">
+                <div class="dustbin-card dustbin-green"><h3>GREEN</h3><p>Biodegradable & organic</p></div>
+                <div class="dustbin-card dustbin-blue"><h3>BLUE</h3><p>Dry & recyclable</p></div>
+                <div class="dustbin-card dustbin-red"><h3>RED</h3><p>Hazardous / biomedical</p></div>
+                <div class="dustbin-card dustbin-yellow"><h3>YELLOW</h3><p>Sanitary & medical</p></div>
+                <div class="dustbin-card dustbin-black"><h3>BLACK/GREY</h3><p>General waste</p></div>
+            </div>
+            <p class="copyright">© 2026 Swachh Explorer</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+
+</body>
+</html>

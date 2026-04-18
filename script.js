@@ -1,26 +1,17 @@
- 
-// copyEmail – used ONLY on index.html
- 
-window.copyEmail = function(e) {
+// copyEmail - used onlyy index.html
+
+function copyEmail(e) {
     e.stopImmediatePropagation();
-    
     const email = "contact@swacchexplorer.in";
-    
     navigator.clipboard.writeText(email).then(() => {
         const btn = e.target.closest('button');
-        if (btn) {
-            const original = btn.innerHTML;
-            btn.innerHTML = 'Copied!';
-            setTimeout(() => { 
-                btn.innerHTML = original; 
-            }, 2000);
-        }
-    }).catch(err => {
-        console.error('Clipboard copy failed:', err);
+        const original = btn.innerHTML;
+        btn.innerHTML = '✅ Copied!';
+        setTimeout(() => { btn.innerHTML = original; }, 2000);
     });
-};
+}
 
-
+//Load Header and Footer
 function loadPartials() {
     // Header
     fetch('header.html')
@@ -61,3 +52,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadPartials();
     setActiveNav();
 });
+
+
